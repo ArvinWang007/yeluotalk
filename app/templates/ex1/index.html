@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js组件1</title>
+		<style type="text/css">
+			.bb{
+				width: 220px; border: 1px solid #ccc; 
+			}
+			.cc{
+				margin-top: 10px;
+				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bb" class="bb">
+			<span></span>
+			<div class="cc">
+				8
+			</div>
+		</div>
+		<script src="jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bb").bigbear();
+			});
+			(function($){
+				$.fn.bigbear = function(opts){
+					opts = $.extend({}, $.fn.bigbear.defaults, opts);
+					return this.each(function(){
+						var elem = $(this);
+						elem.find("span").text(opts["title"]);
+						
+						var xhr = new XMLHttpRequest();
+						xhr.onload = function() {
+							if(xhr.status === 200) {
+								$(document).write('<h1>Succes</h1>');
+								alert("succes");
+							};
+						};
+						xhr.open('GET', 'http://127.0.0.1:5000/data', true);
+						xhr.send(null);
+					});
+				};
+				$.fn.bigbear.defaults = {
+					title: "这是一个简单的测试",
+					url: "http://127.0.0.1:5000/data"
+				
+				};
+			})(jQuery);
+		</script>
+	</body>
+</html>

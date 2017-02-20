@@ -1,0 +1,146 @@
+Exception on /admin/register [POST]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\giantarvin\app\admin\views.py", line 31, in register
+    if form.registerKey.data != register_key:
+AttributeError: 'RegistrationForm' object has no attribute 'registerKey'
+Exception on /admin/register [POST]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 488, in _get_strategy
+    return self._strategies[key]
+KeyError: (('lazy', 'daynamic'),)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\giantarvin\app\admin\views.py", line 41, in register
+    real_name = form.real_name.data)
+  File "<string>", line 2, in __init__
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 347, in _new_state_if_none
+    state = self._state_constructor(instance, self)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 754, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 177, in _state_constructor
+    self.dispatch.first_init(self, self.class_)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\event\attr.py", line 256, in __call__
+    fn(*args, **kw)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2954, in _event_on_first_init
+    configure_mappers()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 2850, in configure_mappers
+    mapper._post_configure_properties()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1765, in _post_configure_properties
+    prop.init()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 183, in init
+    self.do_init()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1656, in do_init
+    self._generate_backref()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1877, in _generate_backref
+    mapper._configure_property(backref_key, relationship)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1668, in _configure_property
+    prop.init()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 183, in init
+    self.do_init()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1658, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 518, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 490, in _get_strategy
+    cls = self._strategy_lookup(*key)
+  File "D:\flask_venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 549, in _strategy_lookup
+    raise Exception("can't locate strategy for %s %s" % (cls, key))
+Exception: can't locate strategy for <class 'sqlalchemy.orm.relationships.RelationshipProperty'> (('lazy', 'daynamic'),)
+Exception on /admin/login [POST]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\giantarvin\app\admin\views.py", line 20, in login
+    login_user(user)
+  File "D:\flask_venv\lib\site-packages\flask_login\utils.py", line 137, in login_user
+    if not force and not user.is_active:
+AttributeError: 'User' object has no attribute 'is_active'
+Exception on /admin/login [POST]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\giantarvin\app\admin\views.py", line 20, in login
+    login_user(user)
+  File "D:\flask_venv\lib\site-packages\flask_login\utils.py", line 137, in login_user
+    if not force and not user.is_active:
+AttributeError: 'User' object has no attribute 'is_active'
+Exception on /data [GET]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\giantarvin\app\main\views.py", line 16, in data
+    return main.send_static_file('index.html')
+  File "D:\flask_venv\lib\site-packages\flask\helpers.py", line 917, in send_static_file
+    raise RuntimeError('No static folder for this object')
+RuntimeError: No static folder for this object
+Exception on /static/index.html [GET]
+Traceback (most recent call last):
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\flask_venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\flask_venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: data() got an unexpected keyword argument 'path'
