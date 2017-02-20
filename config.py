@@ -3,7 +3,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 class Config:
-		SECRET_KEY = 'Giant-Arvin'
+		SECRET_KEY = 'Yeluotalk123'
 		SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 		SQLALCHEMY_TRACK_MODIFICATIONS = True
 
@@ -16,7 +16,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-	SQLALCHEMY_DATABASE_URI = 'mysql://flask:Arvin-blog@127.0.0.1/flask-sql'
+	SQLALCHEMY_DATABASE_URI = 'mysql://root:yeluotalk@localhost/data'
 
 
 config = {
