@@ -1,0 +1,219 @@
+/*body{
+	position: relative;
+}*/
+.bg{
+	position: fixed; left: 0; right: 0; top: 0; bottom: 0;
+}
+.bg ul{
+	width: 100%; height: 100%;
+}
+.bg ul li{
+	width: 100%; height: 100%;
+}
+.aside{
+	width: 250px; height: auto; position: absolute; left: 0; top: 0; bottom: 0; background: rgba(16,116,191,0.5);
+}
+.aside .wrapper{
+	width: 100%; height: 100%; position: relative;
+}
+.aside .logo{
+	padding-top: 20px; width: 100%; 
+}
+.aside .logo img{
+	 margin: 0 auto; display: block;
+}
+.aside .menu{
+	margin-top: 40px;
+}
+.aside .menu ul li{
+	height: 50px; width: 250px; margin-bottom: 20px; position: relative;
+}
+.aside .menu ul li:hover{
+	background-color: #1074bf;
+}
+.aside .menu ul li .ico{
+	position: absolute; left: 60px; top: 8px; 
+}
+.aside .menu ul li .txt{
+	padding-left: 107px; text-align: left; height: auto; padding-top: 10px;
+}
+.aside .menu ul li .txt small{
+	line-height: 1; text-transform: uppercase; font-size: 10px; color: #489ede; display: block;
+}
+.aside .menu ul li .txt span{
+	line-height: 1; display: block; font-size: 14px; color: #FFFFFF; margin-top: 4px;
+}
+.aside .menu ul li .sub{
+	position: absolute; left: 250px; top: 0; width: 160px; height: auto; display: none;
+}
+.aside .menu ul li:hover .sub{
+	display: block;
+}
+/*.aside .menu ul li .sub dl{
+	padding: 0 25px;
+}*/
+.aside .menu ul li .sub dd{
+	font-size: 14px; color: #FFFFFF; height: 50px; line-height: 50px; text-align: center; background-color: #1074bf;
+	/*css3*/
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-transition: all 1s;
+	
+	transform: translateY(-50px);
+	opacity: 0;
+}
+/*.aside .menu ul li .sub dd:nth-child(3){
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+}
+.aside .menu ul li .sub dd:nth-child(4){
+	animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+}.aside .menu ul li .sub dd:nth-child(5){
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+}*/
+.aside .menu ul li.seleted .sub dd{
+	transform: translateY(0px);
+	opacity: 1;
+}
+.aside .menu ul li .sub dd:first-child{
+	transform: translateY(0px)
+}
+
+.aside .menu ul li .sub dd a{
+	color: #FFFFFF; display: block; width: 110px; border-bottom: #2183cd solid 1px; text-align: center; margin: 0 auto; height: 49px;
+}
+.aside .copyright{
+	position: absolute; bottom: 35px; left: 30px; font-size: 12px; color: #61aae1; text-align: right; width: 195px; border-top: #1168a2 solid 1px; line-height: 16px; padding-top: 10px;
+}
+.banner{
+	position: absolute; left: 50%; top: 60px; margin-left: -250px;
+}
+.sns{
+	position: absolute; top: 20px; right: 40px;
+}
+.sns ul li{
+	display: inline; margin-left: 15px;
+}
+.sns ul li img{
+	display: inline-block;
+}
+.news{
+	position: absolute; left: 50%; top: 50%; margin-left: 75px; margin-top: -20px; width: 320px;
+}
+.news .head,
+.news .newsList li{
+	height: 34px; line-height: 34px; padding-left: 7px; border-bottom: rgba(255,255,255,0.21) solid 1px;
+}
+.news .head{
+	color: #1074BF; font-size: 14px;
+}
+
+.news .newsList{
+	height: 70px; overflow: hidden; font-size: 12px; color: #FFFFFF;
+}
+.news .newsList ul li a{
+	color: #FFFFFF;
+}
+.info{
+	position: absolute; left: 251px; right: 0; bottom: 140px; height: 140px; background: rgba(0,0,0,0.6); overflow: hidden;
+}
+.info ul{
+	height: 100%;
+}
+.info ul li{
+	display: inline; width: 141px; overflow: hidden; height: 140px; float: left;
+}
+.info ul li .ico{
+	float: left; width: 140px; height: 140px; border-right: #46433e solid 1px;
+}
+.info ul li:hover .ico{
+	background: #ec7711;
+}
+.info ul li .ico img{
+	display: block; padding-top: 30px; margin: 0 auto;
+}
+.info ul li .ico span{
+	display: block; margin: 17px; text-align: center; font-size: 14px; color: #FFFFFF;
+}
+.info ul li .view{
+	float: left; width: 208px; height: 100%;
+}
+.info ul li .txt{
+	width: 175px; height: 100%; float: left; border-right: #46433e solid 1px;
+}
+.info ul li .txt table{
+	width: 100%; height: 100%; color: #FFFFFF; font-size: 12px; text-align: center;
+}
+
+
+/*内页*/
+.container{
+	width: 876px; height: 560px; position: absolute; left: 50%; top: 50%; margin-top: -280px; margin-left: -438px; background-color: rgba(16,116,191,0.8);
+}
+.container .wrap{
+	position: relative; width: 100%; height: 100%;
+}
+.container .wrap .close{
+	width: 41px; height: 41px; position: absolute; right: 0; top: 0; margin-top: -20.5px; margin-right: -20.5px; 
+}
+.container .wrap .head{
+	padding: 0 45px; height: 50px;
+}
+.container .wrap .head dl{
+	display: block; border-bottom: #3f9ade solid 1px; padding-left: 4px; font-size: 12px; color: #FFFFFF; line-height: 50px;
+}
+.container .wrap .head dt{
+	display: inline;
+}
+.container .wrap .head dd{
+	display: inline;
+}
+.container .wrap .head dd a{
+	color: #FFFFFF;
+}
+.container .wrap .body{
+	padding-left: 53px; height: 450px; overflow: auto; margin-top: 32px;
+}
+.container .wrap .body ul{
+	height: auto; /*width: 110%;*/
+}
+.container .wrap .body ul li{
+	display: inline-block; float: left; margin-right: 48px; width: 355px; height: 239px; overflow: hidden; position: relative; margin-bottom: 42px;
+}
+.container .wrap .body ul li .view{
+	position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+}
+.container .wrap .body ul li .txt{
+	background-color: rgba(0,0,0,0.6); height: 65px; width: 100%; padding-left: 20px; position: absolute; left: 0; bottom: 0;
+}
+.container .wrap .body ul li .txt h3{
+	color: #FFFFFF; font-size: 14px; line-height: 40px;
+}
+.container .wrap .body ul li .txt p{
+	color: #FFFFFF; font-size: 12px; line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

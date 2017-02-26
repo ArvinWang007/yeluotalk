@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=640" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="format-detection" content="telephone=no">
+<title>锤子 </title>
+<link rel="stylesheet" href="css/glide.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+<div class="layout">	
+	<div class="page-verificate">
+		<div class="banner">
+			<img src="imgs/img1.jpg"/>
+		</div>
+		<div class="body">
+			<div class="img">
+				<img src="imgs/img5.png"/>
+			</div>
+			<div class="text">
+				<h3>100 元购买风靡全球的测肤神器现金券</h3>
+				<h2>登个记哦,手机号是领奖凭证哦~</h2>
+			</div>
+		</div>
+		<div class="foot">
+				<form action="" method="post">
+					<input type="date" name="" id="phoneNum" value="" placeholder="请输入手机号"/>
+					<input type="text" name="" id="verificate" value="" placeholder="请输入验证码"/>
+					<input type="submit" id="sure" value="确定领取"/>
+				</form>
+			</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/jquery.glide.js"></script>
+<script type='text/javascript' src='js/imagesloaded.pkgd.min.js'></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/addons.js"></script>
+
+<script>
+	imagesLoaded( $('body'), function(){
+	
+	})
+	$(function(){
+		var glide = $('.glide').glide({
+
+			//autoplay:true,//是否自动播放 默认值 true如果不需要就设置此值
+
+			animationTime:500, //动画过度效果，只有当浏览器支持CSS3的时候生效
+
+			arrows:true, //是否显示左右导航器
+			//arrowsWrapperClass: "arrowsWrapper",//滑块箭头导航器外部DIV类名
+			//arrowMainClass: "slider-arrow",//滑块箭头公共类名
+			//arrowRightClass:"slider-arrow--right",//滑块右箭头类名
+			//arrowLeftClass:"slider-arrow--left",//滑块左箭头类名
+			arrowRightText:"",//定义左右导航器文字或者符号也可以是类
+			arrowLeftText:"",
+
+			nav:true, //主导航器也就是本例中显示的小方块
+			navCenter:true, //主导航器位置是否居中
+			navClass:"slider-nav",//主导航器外部div类名
+			navItemClass:"slider-nav__item", //本例中小方块的样式
+			navCurrentItemClass:"slider-nav__item--current" //被选中后的样式
+		});
+	})
+</script>
+</body>
+</html>
+

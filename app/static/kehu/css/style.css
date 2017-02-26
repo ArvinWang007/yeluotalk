@@ -1,0 +1,266 @@
+/*通用模块组件*/
+.nav-mesg{
+	padding-left: 23px;
+}
+.nav-mesg span{
+	font-size: 20px; color: #0E83B9; line-height: 29px; border-bottom: #2094ca solid 2px; padding: 0 4px;
+}
+.nav-button li{
+	width: 108px; height: 33px; background: #2094CA; border-radius: 2px; margin-right: 12px; font-size: 12px; color: #FFFFFF; display: inline-block; line-height: 33px; text-align: center;
+}
+.nav-button li a{
+	color: #FFFFFF;
+}
+.nav-button li.selected{
+	background: #ff6666;
+}
+.nav-index dt,
+.nav-index dd{
+	display: inline; font-size: 12px;
+}
+.nav-index dt{
+	color: #000000;
+}
+.nav-index dd{
+	color: #707f86;
+}
+.nav-index dd:hover a,
+.nav-index dd.selected a{
+	color: #0e83b9;
+}
+.nav-index dd a{
+	color: #707f86;
+}
+.nav-search{
+	padding: 10px 18px; background: #e8edf1;
+}
+.nav-search ul{
+	height: auto;
+}
+.nav-search ul li{
+	display: inline-block;
+}
+.nav-search li select{
+	width: 137px; height: 30px; font-size: 11px; color: #000000; margin-right: 8px;
+}
+.nav-search li form{
+	background-color: #FFFFFF; padding: 1px; border: #d5dadc solid 1px;
+}
+.nav-search li input.search-text{
+	border: none; background: url(../imgs/ico14.jpg) no-repeat left; line-height: 28px; padding-left: 35px; width: 395px;
+}
+.nav-search li input.search-btn{
+	border: none; background: url(../imgs/bg3.jpg) repeat-x; height: 28px; width: 66px; border-radius: 1px; line-height: 28px;
+}
+.nav-tabel table,
+.nav-tabel th,
+.nav-tabel td{
+	border-collapse: collapse; text-align: center; font-size: 12px;
+}
+.nav-tabel table{
+	border: #dae1e5 solid 1px; width: 100%;
+}
+.nav-tabel th{
+	font-size: 14px; padding: 10px 10px; color: #abb2b7; border: none; border-top: #dae1e5 solid 1px;
+}
+.nav-tabel tr:first-child{
+	border-bottom: #dae1e5 solid 1px; color: #abb2b7; font-size: 14px; background: #f3f6f9;
+}
+.nav-tabel tr{
+	width: 100%; padding: 10px;
+}
+.nav-tabel td{
+	padding: 15px 10px; border: none;
+}
+.nav-tabel tr:nth-child(even){
+	background: #FFFFFF;
+}
+.nav-tabel tr:nth-child(odd){
+	background: #f2f7fa;
+}
+.nav-tabel tr.last-rol{
+	border-bottom: #dae1e5 solid 1px;
+}
+.nav-tabel tr.last-rol td{
+	text-align: left;
+}
+.nav-tabel-btn li{
+	background: url(../imgs/bg2.jpg) repeat-x; padding: 0 16px; font-size: 12px; color: #3880a1; float: left; height: 26px; line-height: 26px; border: #a0b8c3 solid 1px; border-radius: 1px; overflow: hidden; margin-right: 10px;
+}
+.nav-tabel-btn li a{
+	color: #3880a1; text-decoration: none;
+}
+.nav-page li{
+	display: inline; text-align: center; padding: 4px 8px; font-size: 12px; color:#829299; border: #c3d5de solid 1px; margin-right: 6px; line-height: 1px;
+}
+.nav-page li a{
+	color: #829299;
+}
+.nav-page li.selected,
+.nav-page li:hover,
+.nav-page li.selected a,
+.nav-page li:hover a{
+	background: #0E83B9; color: #FFFFFF;
+}
+/*登录页面*/
+.container{
+	width: 1200px; height: 800px; position: absolute; left: 50%; top: 50%; margin-top: -400px; margin-left: -600px; background: url(../imgs/bg.jpg);
+}
+.container .wrap{
+	position: relative; padding: 155px 100px 0;
+}
+.container .wrap .body{
+	border-radius: 4px; border-bottom: #ff5353 solid 5px; overflow: hidden; margin-top: 13px; height: auto; background: #FFFFFF;
+}
+.container .wrap .body .view{
+	float: left; line-height: 0; display: block;
+}
+.container .wrap .body .txt{
+	margin-left: 60px; padding-top: 90px; float: left;
+}
+.container .wrap .body .txt .input-box{
+	height: 50px; border-radius: 2px; border: #d4d4d4 solid 1px; overflow: hidden;
+}
+.container .wrap .body .txt .input-box img{
+
+}
+.container .wrap .body .txt .input-box:first-child{
+	margin-bottom: 27px;
+}
+.container .wrap .body .txt .input-box input{
+	border: none; height: 50px; width: 278px; line-height: 50px; padding-left: 15px;
+}
+.container .wrap .body .txt .check-box{
+	margin-top: 15px; padding-left: 2px;
+}
+.container .wrap .body .txt .check-box label{
+	position: relative; top: -2px;
+}
+.container .wrap .body .txt input.submit{
+	border: none; width: 322px; height: 52px; background-color: #ff5757; margin-top: 20px; border-radius: 2px; color: #FFFFFF; font-size: 19px; text-shadow: 0 1px 2px; cursor: pointer;
+}
+.container .foot{
+	color: #BFEAFD; font-size: 12px; position: absolute; bottom: 75px; left: 0; right: 0; text-align: center;
+}
+
+/*system-page*/
+.custom-page{
+	background: #e0eff6;
+}
+.custom-page .head{
+	height: 154px; width: 100%; background-color: #0e83b9; position: relative; border-bottom: #0a6faa solid 2px;
+}
+.custom-page .head .logo{
+	position: absolute; left: 80px; top: 52px;
+}
+.custom-page .head .nav-mesg{
+	position: absolute; right: 30px; top: 10px;
+}
+.custom-page .head .nav-mesg dd{
+	display: inline; line-height: 16px; color: #FFFFFF; font-size: 13px; text-align: center;
+}
+.custom-page .head .nav-mesg dd a{
+	color: #fffc29; font-size: 13px;
+}
+.custom-page .head .nav-mesg dd.col{
+	margin: 0 10px; position: relative; top: 2px;
+}
+.custom-page .head .nav-mesg dd.sign-out{
+	background: url(../imgs/ico11.png) no-repeat left center; padding-left: 20px;
+}
+.custom-page .head .nav-mesg dd.sign-out a{
+	color: #FFFFFF;
+}
+.custom-page .head .nav-menu{
+	position: absolute; right: 70px; bottom: 12px;
+}
+.custom-page .head .nav-menu ul{
+	height: auto;
+}
+.custom-page .head .nav-menu li{
+	display: inline; float: left; width: 90px; height: 100px; text-align: center; color: #FFFFFF; font-size: 10.5px; border-radius: 1px; margin-right: 5px;
+}
+.custom-page .head .nav-menu li:hover,
+.custom-page .head .nav-menu li.selected{
+	background: #0071a5;
+}
+.custom-page .head .nav-menu li a{
+	color: #FFFFFF; text-decoration: none;
+}
+.custom-page .head .nav-menu li .view{
+	margin-top: 15px;
+}
+.custom-page .head .nav-menu li .txt{
+	margin: 10px auto; display: block;
+}
+.custom-page .body{
+	overflow: auto; zoom: 1;
+}
+.custom-page .body .aside{
+	width: 190px; height: auto; margin: 12px 0 10px 77px; background: #FFFFFF; float: left;
+}
+.custom-page .body .aside .head{
+	height: 40px; width: 100%; line-height: 40px; text-align: center; color: #FFFFFF; font-size: 12px;
+}
+.custom-page .body .aside .body{
+	border: #C9DDE6 solid 1px; border-top: none; position: relative; height: 467px; width: 188px;
+}
+.custom-page .body .aside .body .bg{
+	position: absolute; right: 0; bottom: 0;
+}
+.custom-page .body .aside .body li{
+	height: 42px; width: 100%; line-height: 42px; font-size: 10.5px; color: #696969; position: relative;
+}
+.custom-page .body .aside .body li.selected{
+	background: #EAF3F7;
+}
+.custom-page .body .aside .body li a{
+	color: #696969;
+}
+.custom-page .body .aside .body li.selected a{
+	color: #2094ca;
+}
+.custom-page .body .aside .body li span{
+	background: url(../imgs/ico12.png) no-repeat left; padding-left: 23px; display: block; margin-left: 13px;
+}
+.custom-page .body .aside .body li i{
+	display: block; position: absolute; right: 8px; top: 50%; margin-top: -4.5px; line-height: 1;
+}
+.custom-page .body .main{
+	padding: 30px 25px 22px; background: #FFFFFF; width: 1000px; /*height: 1160px;*/ float: left; margin-left: 10px;
+}
+.system-page .body .main .custom{
+	margin-top: 13px;
+}
+.system-page .body .main .service{
+	margin: 22px 0px;
+}
+.system-page .body .main .nav-tabel{
+	margin-top: 17px;
+}
+.system-page .body .main .nav-page{
+	margin-top: 20px;
+}
+.system-page .body .main .nav-page .wrap{
+	display: block; margin: 0 auto; text-align: center;
+}
+.system-page .body .main .nav-page ul{
+	display: inline-block;
+}
+.system-page .body .main .nav-page .txt{
+	display: inline-block;
+}
+.system-page .body .main .nav-page .txt span{
+	color: #0e83b9;
+}
+.foot{
+	margin-top: 20px; width: 100%; text-align: center; line-height: 53px; font-size: 12px; color: #bfeafd; background: #0e83b9; display: block; float: none;
+}
+
+
+
+
+
+
+
+

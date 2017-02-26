@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=640" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="format-detection" content="telephone=no">
+<title>锤子 </title>
+<link rel="stylesheet" href="css/glide.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+<div class="layout">	
+	<div class="page-game">
+		<div class="logo">
+			<img src="imgs/ico1.png"/>
+		</div>
+		<div class="banner">
+			<img src="imgs/img1.jpg"/>
+		</div>
+		<div class="list">
+			<ul>
+				<li>
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+				<li class="selected">
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						
+					</div>
+					<div class="line">
+						
+					</div>
+					<div class="hammer">
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-wrap">
+			敲宝箱
+		</div>
+		<div class="time">
+			活动时间:即日起-10 月 10 日
+		</div>
+		<div class="rule">
+			<ul>
+				<li>
+					<h2>活动细则</h2>
+					<dl>
+						<dd>1、必须分享后才可砸宝箱,最多可选择砸 6 个宝箱中的 3 个宝箱。</dd>
+						<dd>2、砸中后需验证手机号码,手机号码将是唯一领奖凭证。</dd>
+						<dd>3、需下载肌肤管家 APP,在 APP 内的“我的”-“我的消息”里查看领取方式。</dd>
+					</dl>
+				</li>
+				<li>
+					<h2>奖品说明</h2>
+					<dl>
+						<dd>1、100 元购买风靡全球的测肤神器现金券 5000 张</dd>
+						<dd>
+							2、200 个肌肤管家虚拟金币 1000 份
+							<span>Ps:管家金币越多,在肌肤管家APP内兑换到的礼品越多哦</span>
+						</dd>
+						<dd>3、价值 99 元玫瑰博士明质酸莹润保湿原液 50 份</dd>
+						<dd>4、价值 60 元小蜜坊嘟嘟唇蜜草莓味 50 份</dd>
+						<dd>5、10 元现金红包 200 份</dd>
+						<dd>6、20 元现金红包 100 份</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div class="foot">
+			免责声明:本活动最终解释权归肌肤管家所有<br />
+服务热线:400-0037-993
+		</div>
+	</div>
+	<!--page-game-->
+	<div class="mask">
+		
+	</div>
+	<!--dialog-->
+	<div class="dialog">
+		<div class="body">
+			没有砸中哦,还能砸 2 个,快去!
+		</div>
+		<div class="foot">
+			<a href="###">好的</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/jquery.glide.js"></script>
+<script type='text/javascript' src='js/imagesloaded.pkgd.min.js'></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/addons.js"></script>
+
+<script>
+	imagesLoaded( $('body'), function(){
+	
+	})
+	$(function(){
+		var glide = $('.glide').glide({
+
+			//autoplay:true,//是否自动播放 默认值 true如果不需要就设置此值
+
+			animationTime:500, //动画过度效果，只有当浏览器支持CSS3的时候生效
+
+			arrows:true, //是否显示左右导航器
+			//arrowsWrapperClass: "arrowsWrapper",//滑块箭头导航器外部DIV类名
+			//arrowMainClass: "slider-arrow",//滑块箭头公共类名
+			//arrowRightClass:"slider-arrow--right",//滑块右箭头类名
+			//arrowLeftClass:"slider-arrow--left",//滑块左箭头类名
+			arrowRightText:"",//定义左右导航器文字或者符号也可以是类
+			arrowLeftText:"",
+
+			nav:true, //主导航器也就是本例中显示的小方块
+			navCenter:true, //主导航器位置是否居中
+			navClass:"slider-nav",//主导航器外部div类名
+			navItemClass:"slider-nav__item", //本例中小方块的样式
+			navCurrentItemClass:"slider-nav__item--current" //被选中后的样式
+		});
+	})
+</script>
+</body>
+</html>
+

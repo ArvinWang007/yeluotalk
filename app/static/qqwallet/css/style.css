@@ -1,0 +1,466 @@
+/*css reset*/
+ html{-webkit-text-size-adjust:none; /*解决chrome浏览器下字体不能小于12px*/}
+ body{ color:#000000; font-family:Verdana, Arial, Helvetica, sans-serif;}
+ * {}
+a{outline:none; text-decoration:none;} a:hover{ text-decoration:underline;}
+html{zoom:1;}html *{outline:0;zoom:1;} html button::-moz-focus-inner{border-color:transparent!important;} 
+body{overflow-x: hidden; font-size:12px;} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;} table{/*border-collapse:collapse;border-spacing:0;*/} fieldset,a img{border:0;} address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;} li{list-style:none;} caption,th{text-align:left;} h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;} q:before,q:after{content:'';}
+input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none; /*去掉苹果的默认UI来渲染按钮*/} em,i{ font-style:normal;}
+
+
+
+/**
+ +------------------------------------------------------------------------------
+ * Public Class
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden; }.clearfix {display:block;}.clear{ clear:both;}/* 清除浮动*/
+.colwrapper { overflow:hidden; zoom:1 /*for ie*/; margin:5px auto; }/* 高度自适应 */ 
+.strong{ font-weight: bold;} .left{ float: left;} .right{ float: right;} .center{ margin:0 auto; text-align:center;}
+.show{ display:block; visibility:visible;}.hide{ display: none; visibility:hidden;}
+.block{ display:block;} .inline{ display:inline;}
+.transparent{filter:alpha(opacity=50); -moz-opacity:0.5;/** Firefox 3.5即将原生支持opacity属性，所以本条属性只在Firefox3以下版本有效 ***/ -khtml-opacity: 0.5; opacity: 0.5; } .break{ word-wrap:break-word;overflow:hidden; /*word-break:break-all;*/}
+
+.tal{ text-align:left} .tar{ text-align:right;}
+
+/*文字两侧对齐*/
+.justify {
+	text-align:justify;
+	text-justify:distribute-all-lines;/*ie6-8*/
+	text-align-last:justify;/* ie9*/
+	-moz-text-align-last:justify;/*ff*/
+	-webkit-text-align-last:justify;/*chrome 20+*/
+}
+
+.toe{
+	/*超出省略号*/
+	 word-break:keep-all;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){/* chrome*/
+	.justify:after{
+		content:".";
+		display: inline-block;
+		width:100%;
+		overflow:hidden;
+		height:0;
+	}
+}
+
+/* 兼容IE6的定位属性fixed，固定不动样式 */
+.fixed{
+	position:fixed; 
+	clip:rect(0 100% 100% 0);
+	_position:absolute;
+	
+	/* 底部 */
+	bottom:0px;
+	left:0px;
+	_top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);
+	/*_left:expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);*/
+	
+	/* 左侧 */
+	/*left:0px;*/
+	/*_top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);*/
+	/*_left:expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);*/
+}
+/* 解决固定层在IE6下闪的问题 */
+*html{
+	background-image:url(about:blank);
+	background-attachment:fixed;
+}
+
+
+/*png图片ie6下透明滤镜实现写法*/
+.pngimg{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='images/x.png');}
+
+/**
+ +------------------------------------------------------------------------------
+ * FCK 兼容解决方案
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+em{ font-style:italic !important;} strike{ text-decoration:line-through !important;} strong{ font-weight:bold !important;} u{ text-decoration:underline !important;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 表单样式
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整体颜色总汇
+ +------------------------------------------------------------------------------
+ * @codex  颜色:使用颜色的名称或者16进制代码,如 
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.ff8600,ff86aa a{ color:#ff8600;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整字体大小
+ +------------------------------------------------------------------------------
+ * @codex   字体大小,直接使用"font+字体大小"作为名称,如
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.font14px{ font-size:14px;}
+.font9pt{ font-size:9pt;}
+/*自定义字体*/
+/* @font-face {  font-family: danley;  src: url('../font/danley.ttf');  }  .danley {  font-family: danley; } */
+
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整布局命名规范
+ +------------------------------------------------------------------------------
+ * @codex   id和class命名采用该版块的英文单词或组合命名 如:newRelease
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+ body{font-family: "Microsoft YaHei",sans-serif;}
+ 
+ .css3{
+ 	/*transition: all 0.3s ease-in-out 0s;*/
+	
+	-webkit-transform:translate3d(0, -20px, 0);
+	-ms-transform:translate3d(0, -20px, 0);
+	transform:translate3d(0, -20px, 0);
+	
+	-webkit-transition-property:opacity, -webkit-transform;
+	transition-property:opacity, transform;
+	-webkit-transition-duration:1000ms;
+	transition-duration:1000ms;
+	-webkit-transition-timing-function:cubic-bezier(0.25, 0.46, 0.33, 0.98);
+	transition-timing-function:cubic-bezier(0.25, 0.46, 0.33, 0.98);
+	
+	-webkit-transition-delay:800ms;
+	transition-delay:800ms
+}
+.css3.animated{
+	-webkit-transform:translate3d(0, 0, 0);
+	-ms-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+}
+ 
+@media screen and (max-width: 650px) {    
+  
+  }
+  
+  @media screen and (max-width: 480px) {   
+	 
+  }
+.rotate
+{
+transform:rotate(7deg);
+-ms-transform:rotate(7deg); 	/* IE 9 */
+-moz-transform:rotate(7deg); 	/* Firefox */
+-webkit-transform:rotate(7deg); /* Safari 和 Chrome */
+-o-transform:rotate(7deg); 	/* Opera */
+}
+
+-webkit-text-size-adjust:none; /*禁止苹果对部分字体放大处理bug*/
+html{
+	/*font-size: 62.5%; //font-size为10px*/
+	font-size: 125%;  /*font-size为20px*/
+}
+/*分别匹配320  360 375 480 560 640 宽度的设备*/
+/*@media only screen and (max-width: 641px) {
+	html{font-size: 106.67%;}
+}
+@media only screen and (max-width: 561px) {
+	html{font-size: 93.33%;}
+}
+@media only screen and (max-width: 481px) {
+	html{font-size: 80%;}
+}
+@media only screen and (max-width: 375px) {
+	html{font-size: 62.5%;}
+}
+@media only screen and (max-width: 360px) {
+	html{font-size: 60%;}
+}
+@media only screen and (max-width: 320px) {
+	html{font-size: 53.33%;}
+}*/
+.layout{
+	width: 37.5rem; 
+	margin: 0 auto; 
+	font-size: 1.2rem; 
+	line-height: 1.7em;
+	color: #b99c63;
+}
+.confirm{
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 512px;
+	height: 512px;
+}
+.confirm .wrapper{
+	position: relative;
+}
+.confirm .wrapper button{
+	position: absolute;
+	padding: 10px 30px;
+	background: #EBDFA1;
+	bottom: 15px;
+	left: 180px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.page1,
+.page2,
+.page3{
+	height: 56.8rem; 
+	background: url(../img/bg.jpg) no-repeat center;
+	overflow: hidden;
+	position: relative;
+}
+.logo{
+	text-align: center;
+	margin-top: 3rem;
+}
+.logo img{
+	width: 7.8rem;
+	height: 1.9rem;
+}
+.page1 .logo2{
+	text-align: center;
+	margin-top: 1.25rem;
+}
+.page1 .logo2 img{
+	width: 25.25rem;
+	height: 18.15rem;
+}
+.page1.active .logo2{
+	animation: fadeIn 1s 0.5s both;
+	-webkit-animation: fadeIn 1s 0.5s both;
+	-ms-animation: fadeIn 1s 0.5s both;
+}
+.arrow{
+	text-align: center;
+	position: absolute;
+	bottom: 3rem;
+	left: 0;
+	right: 0;
+	
+	/*css3*/
+	-webkit-animation:bounce 1s .2s infinite linear both;
+	-moz-animation:bounce 1s .2s infinite linear both;
+}
+.arrow img{
+	width: 3rem;
+	height: 3rem;
+}
+.page1 .list{
+	margin-top: 2.5rem;
+	margin-left: 18.75rem;
+	border-left: #71643d solid 1px;
+}
+.page1 .list li{
+	position: relative;
+	margin-bottom: 1.25rem;
+}
+.page1 .list li:nth-child(even){
+	margin-left: -18.75rem;
+	width: 18.75rem;
+	text-align: right;
+}
+.page1 .list li .ico{
+	position: absolute;
+	background: url(../img/img2.png) no-repeat;
+	background-size: cover;
+	width: 1.25rem;
+	height: 1.25rem;
+	left: -0.62rem;
+}
+.page1 .list li:nth-child(even) .ico{
+	right: -0.62rem;
+	left: auto;
+}
+.page1 .list li .txt{
+	margin-left: 2rem;
+}
+.page1 .list li:nth-child(even) .txt{
+	margin-right: 2rem;
+}
+
+.page1 .list li .txt h2{
+	font-size: 1.2rem;
+	line-height: 1em;
+}
+.page1 .list li .txt h3{
+	font-size: 1.2rem;
+}
+.page1 .list li .txt h4{
+	font-size: 1rem;
+	line-height: 1em;
+}
+.page1.active li:nth-child(1) .txt{
+	-webkit-animation:fadeInRight 1s .2s ease both;
+	-moz-animation:fadeInRight 1s .2s ease both;
+}
+.page1.active li:nth-child(2) .txt{
+	-webkit-animation:fadeInLeft 1s .4s ease both;
+	-moz-animation:fadeInLeft 1s .4s ease both;
+}
+.page1.active li:nth-child(3) .txt{
+	-webkit-animation:fadeInRight 1s .6s ease both;
+	-moz-animation:fadeInRight 1s .6s ease both;
+}
+.page1.active li:nth-child(4) .txt{
+	-webkit-animation:fadeInLeft 1s .8s ease both;
+	-moz-animation:fadeInLeft 1s .8s ease both;
+}
+.page1.active li:nth-child(5) .txt{
+	-webkit-animation:fadeInRight 1s 1s ease both;
+	-moz-animation:fadeInRight 1s 1s ease both;
+}
+.page2 .logo2{
+	text-align: center;
+	margin-top: 1.25rem;
+	line-height: 0;
+}
+.page2 .logo2 img{
+	width: 23.25rem;
+	height: 11.7rem;
+}
+.page2.active .logo2{
+	animation: fadeIn 1s 0.5s both;
+	-webkit-animation: fadeIn 1s 0.5s both;
+	-ms-animation: fadeIn 1s 0.5s both;
+}
+.page2 .list li{
+	float: left;
+	margin-right: 2.25rem;
+	margin-bottom: 1.25rem;
+}
+.page2.active .list li:nth-child(1){
+	animation: bounceIn 1s .2s ease both;
+	-webkit-animation:bounceIn 1s .2s ease both;
+	-moz-animation:bounceIn 1s .2s ease both;
+}
+.page2.active .list li:nth-child(2){
+	animation: bounceIn 1s .4s ease both;
+	-webkit-animation:bounceIn 1s .4s ease both;
+	-moz-animation:bounceIn 1s .4s ease both;
+}
+.page2.active .list li:nth-child(3){
+	animation: bounceIn 1s .6s ease both;
+	-webkit-animation:bounceIn 1s .6s ease both;
+	-moz-animation:bounceIn 1s .6s ease both;
+}
+.page2.active .list li:nth-child(4){
+	animation: bounceIn 1s .8s ease both;
+	-webkit-animation:bounceIn 1s .8s ease both;
+	-moz-animation:bounceIn 1s .8s ease both;
+}
+.page2.active .list li:nth-child(5){
+	animation: bounceIn 1s 1s ease both;
+	-webkit-animation:bounceIn 1s 1s ease both;
+	-moz-animation:bounceIn 1s 1s ease both;
+}
+.page2.active .list li:nth-child(6){
+	animation: bounceIn 1s 1.2s ease both;
+	-webkit-animation:bounceIn 1s 1.2s ease both;
+	-moz-animation:bounceIn 1s 1.2s ease both;
+}
+.page2.active .list li:nth-child(7){
+	animation: bounceIn 1s 1.4s ease both;
+	-webkit-animation:bounceIn 1s 1.4s ease both;
+	-moz-animation:bounceIn 1s 1.4s ease both;
+}
+.page2.active .list li:nth-child(8){
+	animation: bounceIn 1s 1.6s ease both;
+	-webkit-animation:bounceIn 1s 1.6s ease both;
+	-moz-animation:bounceIn 1s 1.6s ease both;
+}
+.page2.active .list li:nth-child(9){
+	animation: bounceIn 1s 1.8s ease both;
+	-webkit-animation:bounceIn 1s 1.8s ease both;
+	-moz-animation:bounceIn 1s 1.8s ease both;
+}
+.page2 .list li img{
+	display: block;
+	width: 7.85rem;
+	height: 7.85rem;
+}
+.page2 .list{
+	margin-top: 4rem;
+	margin-left: 4.5rem;
+}
+.page3 .logo2{
+	margin-top: 2rem;
+	line-height: 0;
+	text-align: center;
+}
+.page3 .logo2 img{
+	width: 24.8rem;
+	height: 11.55rem;
+}
+.page3.active .logo2{
+	animation: fadeIn 1s .2s ease both;
+	-webkit-animation:fadeIn 1s .2s ease both;
+	-moz-animation:fadeIn 1s .2s ease both;
+}
+.page3 .tips{
+	position: absolute;
+	text-align: center;
+	bottom: 6.75rem;
+	left: 0;
+	right: 0;
+	font-size: 1.2rem;
+	color: #947553;
+}
+.page3 .view{
+	position: relative;
+	margin-top: 5rem;
+}
+.page3 .view .txt{
+	position: absolute;
+	top: 4.5rem;
+	left: 17.25rem;
+}
+.page3 .view .pic{
+	float: left;
+	margin-left: 7.25rem;
+	margin-right: 3.5rem;
+}
+.page3 .view .pic img{
+	display: block;
+	width: 6.55rem;
+	height: 14.4rem;
+}
+.page3 .btns{
+	position: absolute;
+	bottom: 11rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.page3 .btns a{
+	border: #f6cb6f solid 1px;
+	padding: 1.25rem 2.25rem;
+	margin-left: 2rem;
+}
+.page3 .view .txt p{
+	font-size: 1.35rem;
+	color: #f1e395;
+}
+.page3 .btns a{
+	font-size: 1.5rem;
+	color: #f1e395;
+	text-decoration: none;
+}
